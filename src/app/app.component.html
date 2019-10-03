@@ -1,0 +1,40 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu *ngIf="usuarioLogado">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="btnPerfil()">
+              <ion-icon slot="start" name="person"></ion-icon>
+              <ion-label>Perfil</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="btnHome()">
+                <ion-icon slot="start" name="wine"></ion-icon>
+                <ion-label>Estabelecimentos</ion-label>
+              </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="BtnComandas()">
+              <ion-icon slot="start" name="pizza"></ion-icon>
+              <ion-label>Comandas</ion-label>
+            </ion-item>
+        </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="btnSair()">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>Sair</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
